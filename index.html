@@ -1,0 +1,277 @@
+
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Codebruary Timeline</title>
+<style>
+body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+h1 { text-align: center; color: #b74b4b; }
+.timeline { max-width: 800px; margin: auto; display: flex; flex-direction: column; gap: 20px; }
+.card { background: white; border-left: 6px solid #b74b4b; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.card h2 { margin: 0; font-size: 1.2em; }
+.card pre { background: #f9f9f9; padding: 10px; margin-top: 8px; display: none; white-space: pre-wrap; border-left: 4px solid #4caf50; }
+input[type=checkbox] { float: right; transform: scale(1.3); margin-top: 4px; }
+</style></head><body><h1>Codebruary 2025 - Full Timeline</h1><div class='timeline'>
+
+<div class='card'>
+  <input type='checkbox' id='chk1' onclick="toggle('pre1')">
+  <h2>Day 1: Print 'Hello, World!'</h2>
+  <div>✅ Use print or console.log to display text.</div>
+  <pre id='pre1'>print('Hello, World!')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk2' onclick="toggle('pre2')">
+  <h2>Day 2: Ask for user's name and greet them.</h2>
+  <div>✅ Use input() and f-strings.</div>
+  <pre id='pre2'>name = input('Enter your name: ')
+print(f'Hello, {name}!')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk3' onclick="toggle('pre3')">
+  <h2>Day 3: Add two numbers entered by the user.</h2>
+  <div>✅ Convert input to int, then add.</div>
+  <pre id='pre3'>a = int(input('Enter first number: '))
+b = int(input('Enter second number: '))
+print('Sum:', a + b)</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk4' onclick="toggle('pre4')">
+  <h2>Day 4: Check if a number is even or odd.</h2>
+  <div>✅ Use modulo operator %.</div>
+  <pre id='pre4'>num = int(input('Enter a number: '))
+if num % 2 == 0:
+    print('Even')
+else:
+    print('Odd')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk5' onclick="toggle('pre5')">
+  <h2>Day 5: Find the largest of 3 numbers.</h2>
+  <div>✅ Use if-elif-else or max().</div>
+  <pre id='pre5'>a = int(input())
+b = int(input())
+c = int(input())
+print('Largest:', max(a, b, c))</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk6' onclick="toggle('pre6')">
+  <h2>Day 6: Calculate factorial using loop.</h2>
+  <div>✅ Use a for loop.</div>
+  <pre id='pre6'>n = int(input())
+fact = 1
+for i in range(1, n+1):
+    fact *= i
+print('Factorial:', fact)</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk7' onclick="toggle('pre7')">
+  <h2>Day 7: Reverse a string.</h2>
+  <div>✅ Use slicing [::-1].</div>
+  <pre id='pre7'>text = input('Enter text: ')
+print('Reversed:', text[::-1])</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk8' onclick="toggle('pre8')">
+  <h2>Day 8: Check if string is palindrome.</h2>
+  <div>✅ Compare with reversed.</div>
+  <pre id='pre8'>text = input('Enter text: ')
+if text == text[::-1]:
+    print('Palindrome')
+else:
+    print('Not palindrome')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk9' onclick="toggle('pre9')">
+  <h2>Day 9: Generate multiplication table.</h2>
+  <div>✅ Use a loop up to 10.</div>
+  <pre id='pre9'>num = int(input('Number: '))
+for i in range(1, 11):
+    print(f'{num} x {i} = {num*i}')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk10' onclick="toggle('pre10')">
+  <h2>Day 10: Count vowels in a string.</h2>
+  <div>✅ Loop and count vowels.</div>
+  <pre id='pre10'>text = input('Enter text: ')
+vowels = 'aeiouAEIOU'
+count = sum(1 for ch in text if ch in vowels)
+print('Vowels:', count)</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk11' onclick="toggle('pre11')">
+  <h2>Day 11: Print all prime numbers from 1 to 50.</h2>
+  <div>✅ Use a prime checking function.</div>
+  <pre id='pre11'>for num in range(2, 51):
+    for i in range(2, int(num**0.5)+1):
+        if num % i == 0:
+            break
+    else:
+        print(num, end=' ')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk12' onclick="toggle('pre12')">
+  <h2>Day 12: Find the length of a list.</h2>
+  <div>✅ Use len().</div>
+  <pre id='pre12'>mylist = [1, 2, 3, 4]
+print('Length:', len(mylist))</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk13' onclick="toggle('pre13')">
+  <h2>Day 13: Sort a list.</h2>
+  <div>✅ Use sort() or sorted().</div>
+  <pre id='pre13'>nums = [3, 1, 4, 2]
+nums.sort()
+print('Sorted:', nums)</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk14' onclick="toggle('pre14')">
+  <h2>Day 14: Check if an element is in list.</h2>
+  <div>✅ Use 'in' keyword.</div>
+  <pre id='pre14'>item = 3
+mylist = [1, 2, 3, 4]
+print('Found' if item in mylist else 'Not found')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk15' onclick="toggle('pre15')">
+  <h2>Day 15: Sum all elements in a list.</h2>
+  <div>✅ Use sum().</div>
+  <pre id='pre15'>nums = [1, 2, 3]
+print('Total:', sum(nums))</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk16' onclick="toggle('pre16')">
+  <h2>Day 16: Create a dictionary and print keys.</h2>
+  <div>✅ Use keys().</div>
+  <pre id='pre16'>mydict = {'a': 1, 'b': 2}
+print('Keys:', list(mydict.keys()))</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk17' onclick="toggle('pre17')">
+  <h2>Day 17: Access a dictionary value.</h2>
+  <div>✅ Use dict[key].</div>
+  <pre id='pre17'>mydict = {'name': 'Alice'}
+print(mydict['name'])</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk18' onclick="toggle('pre18')">
+  <h2>Day 18: Loop through a dictionary.</h2>
+  <div>✅ Use items().</div>
+  <pre id='pre18'>mydict = {'a': 1, 'b': 2}
+for k, v in mydict.items():
+    print(k, v)</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk19' onclick="toggle('pre19')">
+  <h2>Day 19: Define a function to square a number.</h2>
+  <div>✅ Use def and return.</div>
+  <pre id='pre19'>def square(x):
+    return x * x
+print(square(5))</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk20' onclick="toggle('pre20')">
+  <h2>Day 20: Use try-except for division.</h2>
+  <div>✅ Catch ZeroDivisionError.</div>
+  <pre id='pre20'>try:
+    a = int(input())
+    b = int(input())
+    print(a / b)
+except ZeroDivisionError:
+    print('Cannot divide by zero')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk21' onclick="toggle('pre21')">
+  <h2>Day 21: Read from a file.</h2>
+  <div>✅ Use open() and read().</div>
+  <pre id='pre21'>with open('file.txt', 'r') as f:
+    print(f.read())</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk22' onclick="toggle('pre22')">
+  <h2>Day 22: Write to a file.</h2>
+  <div>✅ Use write() method.</div>
+  <pre id='pre22'>with open('file.txt', 'w') as f:
+    f.write('Hello file')</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk23' onclick="toggle('pre23')">
+  <h2>Day 23: Create a class with attributes.</h2>
+  <div>✅ Use class and __init__().</div>
+  <pre id='pre23'>class Person:
+    def __init__(self, name):
+        self.name = name
+p = Person('Bob')
+print(p.name)</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk24' onclick="toggle('pre24')">
+  <h2>Day 24: Create a class with method.</h2>
+  <div>✅ Use def inside class.</div>
+  <pre id='pre24'>class Person:
+    def greet(self):
+        print('Hi!')
+p = Person()
+p.greet()</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk25' onclick="toggle('pre25')">
+  <h2>Day 25: Use a for loop with range.</h2>
+  <div>✅ Use range().</div>
+  <pre id='pre25'>for i in range(5):
+    print(i)</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk26' onclick="toggle('pre26')">
+  <h2>Day 26: Use a while loop.</h2>
+  <div>✅ Increment conditionally.</div>
+  <pre id='pre26'>i = 0
+while i < 5:
+    print(i)
+    i += 1</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk27' onclick="toggle('pre27')">
+  <h2>Day 27: Use a list comprehension.</h2>
+  <div>✅ Simple syntax.</div>
+  <pre id='pre27'>squares = [x**2 for x in range(5)]
+print(squares)</pre>
+</div>
+
+<div class='card'>
+  <input type='checkbox' id='chk28' onclick="toggle('pre28')">
+  <h2>Day 28: Use zip() to combine lists.</h2>
+  <div>✅ Use zip().</div>
+  <pre id='pre28'>a = [1, 2]
+b = ['one', 'two']
+print(list(zip(a, b)))</pre>
+</div>
+
+</div><script>
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+</script></body></html>
